@@ -1,0 +1,54 @@
+
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+ 
+  animation: moveBox 4s infinite;
+}
+
+
+@keyframes moveBox {
+
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  25% {
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ 
+  50% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ 
+  75% {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
