@@ -1,0 +1,34 @@
+.container{
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right , pink, purple);
+}
+.link{
+    color: rgb(17, 17, 90);
+}
+h1{
+    font-size: 30px;
+}
+.btn{
+    padding: 10px 20px;
+    background-color: rgb(68, 68, 223);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(17, 17, 90);
+}
+.link:hover{
+    color: rgb(1, 1, 19);
+}
+.input:focus{
+    border-color: rgb(9, 90, 90);
+}
+li:nth-child(odd){
+    background-color: rgba(190, 175, 175, 0.2);
+}
+li:nth-child(even){
+    background-color: rgba(226, 21, 21, 0.1);
+}
