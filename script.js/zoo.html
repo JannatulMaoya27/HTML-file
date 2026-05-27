@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Zoo</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #zoo {
+            border: 3px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+        }
+
+        .zone {
+            border: 2px solid green;
+            margin: 10px;
+            padding: 10px;
+            background-color: lightyellow;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital Zoo</h1>
+    <div id="zoo">
+        <div class="zone" id="lionzone">lionzone</div>
+        <div class="zone" id="tigerzone">tigerzone</div>
+        <div class="zone" id="bearzone">bearzone</div>
+    </div>
+    <button onclick="explorezoo()">Show Animals</button>
+    <script>
+    function explorezoo() {
+    let zoo = document.getElementById("zoo");
+    console.log("parent of zoo:",zoo.parentNode);
+    console.log("children of zoo:",zoo.children);
+    console.log("First child:", zoo.firstElementChild);
+    console.log("Last child:", zoo.lastElementChild);
+
+    let lion = document.getElementById("lionzone");
+    lion.textContent = "the king of the jungle";
+    lion.style.background = "orange";
+    lion.style.color = "white";
+    alert("Zoo has been explored")
+    
+}
+    </script>
+    
+</body>
+</html>
