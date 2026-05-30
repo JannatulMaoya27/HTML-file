@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Birthday Countdown</h2>
+
+<input type="date" id="dob">
+<button onclick="check()">Check</button>
+
+<p id="out"></p>
+
+<script>
+function check() {
+    let dob = document.getElementById("dob").value;
+    if (!dob) return;
+
+    let today = new Date();
+    let birth = new Date(dob);
+
+    let next = new Date(today.getFullYear(), birth.getMonth(), birth.getDate());
+
+    if (next < today) next.setFullYear(today.getFullYear() + 1);
+
+    let days = Math.ceil((next - today) / (1000 * 60 * 60 * 24));
+
+    document.getElementById("out").innerText = days + " days left 🎂";
+}
+</script>
+
+</body>
+</html>
