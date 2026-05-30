@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Cards</title>
+    <style>
+        h1 {
+            color: rgb(197, 101, 197);
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 45px;
+        }
+        p {
+            color: rgb(74, 71, 71);
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .card {
+            background: white;
+            border: 3px solid rgb(197, 101, 197);
+            border-radius: 12px;
+            padding: 20px;
+            width: 200px;
+            color: black;
+            margin: 20px auto;
+
+
+
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 12px;
+            background-color: rgb(197, 101, 197);
+            color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 250px;
+        }
+
+         .superhero {
+            font-size: 22px;
+            font-weight: bold;
+            color: black; 
+            text-align: center;  
+
+        }
+        .power {
+            font-size: 15px;
+            color: rgb(74, 71, 71);
+            text-align: center;
+            margin-top: 10px;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Superhero Cards</h1>
+    <p>Here are my favorite superheroes!</p>
+    <div class="cards">
+        <div id="ironman"></div>
+        <div id="spiderman"></div>
+        <div id="wonderwoman"></div>
+    </div>
+    <button onclick="superheroes()">Show Superheroes and their powers!</button>
+</body>
+<script>
+    class Superhero {
+        constructor(name, power) {
+            this.name = name;
+            this.power = power;
+        }
+
+        describe() {
+            return this.name + ": " + this.power;
+        }
+    }
+    function superheroes() {
+        const ironMan = new Superhero("Iron Man", "Powered by Arc Reactor");
+        const spiderMan = new Superhero("Spider-Man", "Wall-Crawler");
+        const wonderWoman = new Superhero("Wonder Woman", "Amazonian Warrior");
+
+        document.getElementById("ironman").innerHTML =
+            "<div class='card'><div class='superhero'>" + ironMan.name + "</div>" + 
+            "<div class='power'>" + ironMan.power + "</div></div>";
+        document.getElementById("spiderman").innerHTML =
+            "<div class='card'><div class='superhero'>" + spiderMan.name + "</div>" + 
+            "<div class='power'>" + spiderMan.power + "</div></div>";
+        document.getElementById("wonderwoman").innerHTML =
+            "<div class='card'><div class='superhero'>" + wonderWoman.name + "</div>" + 
+            "<div class='power'>" + wonderWoman.power + "</div></div>";
+    }
+</script>
+</html>
