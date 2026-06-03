@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array mapping</title>
+</head>
+<body>
+    <h2>Array mapping</h2>
+    <script>
+     
+
+      const numbers = [1,2,3,4,5];
+      let newNumbers = numbers.map(num=> num * 2);
+
+      let ascending = numbers.sort((a, b) => a - b);
+
+      let descending = numbers.sort((a, b) => b - a);
+
+      document.write("Original array: " + numbers + "<br>");
+        document.write("newNumbers " + newNumbers + "<br>");
+        document.write("Ascending order: " + ascending + "<br>");
+        document.write("Descending order: " + descending + "<br>"); 
+    </script>
+
+</body>
+</html>
