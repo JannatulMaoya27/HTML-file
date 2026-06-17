@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event registration form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Event Registration Form</h2>
+
+        <input type="text" id="name" placeholder="Your name"><br>
+        <input type="email" id="email" placeholder="Your email"><br>
+        <input type="number" id="age" placeholder="Your age"><br>
+
+
+        <select id="event">
+            <option value="">Select an event</option>
+            <option value="Coding competition">Coding Competition</option>
+            <option value="Robotics">Robotics</option>
+            <option value="Web development">Web Development</option>
+        </select>
+
+        <button onclick="register()">Register</button>
+
+        <p id="message"></p>
+        <div id="pass"></div>
+    </div>
+
+    <script>
+        function register() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+            let event = document.getElementById("event").value;
+            let pass = document.getElementById("pass").value;
+
+            if (name === "" || email === "" || age === "" || event === "") {
+                document.getElementById("message").textContent = "Please fill in all fields!";
+                document.getElementById("message").style.color = "red";
+                return;
+            }
+
+            if (age < 18) {
+                document.getElementById("message").textContent = "Sorry, you must be at least 18 years old to register.";
+                document.getElementById("message").style.color = "red";
+                return;
+            }
+
+            document.getElementById("message").textContent = "Registration successful! Welcome, " + name + "!";
+            document.getElementById("message").style.color = "green";
+
+
+            setTimeout(function () {
+                let pass = Math.floor(Math.random() * 1000000);
+                document.getElementById("pass").style.display = "block";
+                document.getElementById("pass") .innerHTML = `
+                <h3>Your Registration Password:</h3>
+                   <p>Name: ${name}</p>
+                   <p>Email: ${email}</p>
+                   <p>Age: ${age}</p>
+                   <p>Event: ${event}</p>
+                   <p>Password: ${pass}</p>
+                `;
+            }, 2000);
+
+        } 
+
+    </script>
+
+
+    
+</body>
+</html>
