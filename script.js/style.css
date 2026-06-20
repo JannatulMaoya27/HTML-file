@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    font-family: "Baloo Tama 2", sans-serif;
+    background:white;
+}
+
+.navigation {
+    backgraund: #333;
+    boarder-top: 2px 40px !important;
+}
+
+.brand-logo{
+    height: 26px;
+    width:auto
+}
+
+.navigation-links{
+    text-decoration: none
+}
